@@ -13,7 +13,7 @@ before_install:
   - gcloud auth activate-service-account --key-file service-account.json
   - gcloud config set project k8s-practice-284415
   - gcloud config set compute/zone asia-northeast1-a	
-  - gcloud container clusters get-credintials k8s-practice
+  - gcloud container clusters get-credentials k8s-practice
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --passowrd-stdin
   - docker build -t cinemania/react-test -f ./client/Dockerfile.dev ./client
 
