@@ -7,7 +7,7 @@ spec:
   issuerRef:
     name: letsencrypt-prod
     kind: ClusterIssuer
-  commonName: ovara.love
+  commonName: obara.love
   dnsNames:
     - obara.love
   acme:
