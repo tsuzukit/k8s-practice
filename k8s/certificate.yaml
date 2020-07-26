@@ -1,0 +1,18 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: k8s-practice-cluster-tls
+spec:
+  secretName: k8s-practice-cluster
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: ovara.love
+  dnsNames:
+    - obara.love
+  acme:
+    config:
+      - http01:
+          ingressClass: nginx
+        domains:
+          - obara.love
